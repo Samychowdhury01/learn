@@ -26,7 +26,7 @@ const Navbar = () => {
   return (
     <>
       <div className="navbar bg-base-100 md:py-9">
-        <div className="navbar-start">
+        <div className="navbar-start md:w-1/3">
           <div className="dropdown">
             <label tabIndex={0} className="btn btn-ghost lg:hidden">
               <svg
@@ -59,7 +59,7 @@ const Navbar = () => {
             <div className="w-10 h-10 rounded-lg bg-primary"></div>
             <span className="text-[32px] font-bold">Learn</span></div>
         </div>
-        <div className="navbar-end hidden lg:flex">
+        <div className="navbar-end w-full hidden lg:flex">
           <ul className="menu menu-horizontal px-1">
             {navItems}
           </ul>

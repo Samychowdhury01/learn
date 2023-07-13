@@ -4,7 +4,7 @@ import nitish from '../../../assets/home/nitish_kumar.png'
 
 const Banner = () => {
   return (
-    <section className="flex flex-col-reverse md:flex-row items-center gap-5 md:gap-0 mt-7 p-5 md:p-0">
+    <section className="flex flex-col-reverse md:flex-row items-center gap-5 md:gap-0 mt-7 mb-[60px] px-5">
       {/* text container */}
       <div className="md:w-1/2">
         <h1 className="text-[30px] md:text-[44px] font-light mb-2">Learn new skills today.</h1>
