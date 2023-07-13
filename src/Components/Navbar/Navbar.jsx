@@ -1,37 +1,31 @@
 import React from "react";
 import Button from "../Button/Button";
+import ActiveLink from "./ActiveLink";
 
 const Navbar = () => {
   const navItems = (
     <>
       <li>
-        <a>Item 1</a>
-      </li>
-      <li tabIndex={0}>
-        <details>
-          <summary>Parent</summary>
-          <ul className="p-2">
-            <li>
-              <a>Submenu 1</a>
-            </li>
-            <li>
-              <a>Submenu 2</a>
-            </li>
-          </ul>
-        </details>
+        <ActiveLink to='/courses'>Courses</ActiveLink>
       </li>
       <li>
-        <a>Item 3</a>
+        <ActiveLink to='/consult'>Consult</ActiveLink>
       </li>
-      <div>
-      <button className="btn bg-[#F78D2F] hover:btn-warning normal-case">Apply</button>
-      </div>
+      <li>
+        <ActiveLink to='/training'>Personal training</ActiveLink>
+      </li>
+      <li>
+        <ActiveLink to='/discover'>Discover</ActiveLink>
+      </li>
+      <li>
+        <ActiveLink to='/contact'>Contact Us</ActiveLink>
+      </li>
     </>
   );
 
   return (
     <>
-      <div className="navbar bg-base-100">
+      <div className="navbar bg-base-100 md:py-9">
         <div className="navbar-start">
           <div className="dropdown">
             <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -55,16 +49,23 @@ const Navbar = () => {
               className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
             >
               {navItems}
+              <div>
+      <button className="btn bg-[#F78D2F] hover:btn-warning normal-case">Apply</button>
+      </div>
             </ul>
+            
           </div>
-          <div className="btn btn-ghost normal-case text-xl">
+          <div className="flex items-center gap-2">
             <div className="w-10 h-10 rounded-lg bg-primary"></div>
-            <span className="text-[32px]">Learn</span></div>
+            <span className="text-[32px] font-bold">Learn</span></div>
         </div>
         <div className="navbar-end hidden lg:flex">
           <ul className="menu menu-horizontal px-1">
             {navItems}
           </ul>
+          <div>
+      <button className="btn bg-[#F78D2F] hover:btn-warning normal-case">Apply</button>
+      </div>
         </div>
       </div>
     </>
