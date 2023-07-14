@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import classImage from '../../../assets/home/class.png'
 import Button from "../../../Components/Button/Button";
 
@@ -82,6 +83,7 @@ const CourseSection = () => {
             </div>
           </div>
         </div>
+        <h1 className="text-lg md:text-xl font-bold pt-[52px]">You can start for FREE! <Link to='/' className="text-[#EC261F] underline">Join a live webinar</Link> for web development, data analytics, or UX design.</h1>
       </div>
     </section>
   );
